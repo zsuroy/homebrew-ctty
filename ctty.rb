@@ -5,21 +5,21 @@
 class Ctty < Formula
   desc "A lightweight terminal connection manager for SSH, serial, and SFTP"
   homepage "https://github.com/zsuroy/ctty"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/zsuroy/ctty/releases/download/v0.3.0/ctty_Darwin_x86_64.tar.gz"
-      sha256 "0610aa11a60bdba7fa82d8592cce764166444841dcab9a3cfec1f34c7a1eaa3b"
+      url "https://github.com/zsuroy/ctty/releases/download/v0.4.0/ctty_Darwin_x86_64.tar.gz"
+      sha256 "4ba5e2a33725a32230f6251a6fac7ff17c3ab807a7559d80bfb20b8dda9138bd"
 
       define_method(:install) do
         bin.install "ctty"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/zsuroy/ctty/releases/download/v0.3.0/ctty_Darwin_arm64.tar.gz"
-      sha256 "14bd9872eb44ed5e1051d09f409bce304294b500e40d424693283d995c995f89"
+      url "https://github.com/zsuroy/ctty/releases/download/v0.4.0/ctty_Darwin_arm64.tar.gz"
+      sha256 "ebaf77e4a2552140b134f33d3084c07ab26b02f32934068b903c9b9472b363ad"
 
       define_method(:install) do
         bin.install "ctty"
@@ -29,22 +29,22 @@ class Ctty < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zsuroy/ctty/releases/download/v0.3.0/ctty_Linux_x86_64.tar.gz"
-      sha256 "033866c1764eb9f96121e04be6b04bda11705b5d5ac2b7e09145d7237cf3e4ae"
+      url "https://github.com/zsuroy/ctty/releases/download/v0.4.0/ctty_Linux_x86_64.tar.gz"
+      sha256 "4995569245eae3bd95ee1233286a644ab48c1ef7e60f220aa58db5661d98478e"
       define_method(:install) do
         bin.install "ctty"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/zsuroy/ctty/releases/download/v0.3.0/ctty_Linux_armv6.tar.gz"
-      sha256 "197e9879f3288c581758980809e15e085ce17fcb0cde7c3af9b5f9ec1f03c5e7"
+      url "https://github.com/zsuroy/ctty/releases/download/v0.4.0/ctty_Linux_armv6.tar.gz"
+      sha256 "ea8b1e68bca98f6d9d52706b25cadf292d9a2bed924d9e92fc0591969a389634"
       define_method(:install) do
         bin.install "ctty"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/zsuroy/ctty/releases/download/v0.3.0/ctty_Linux_arm64.tar.gz"
-      sha256 "25268ed9fd1971582728212535df046bfb3747f46f3418ae7d551182e3bdaed4"
+      url "https://github.com/zsuroy/ctty/releases/download/v0.4.0/ctty_Linux_arm64.tar.gz"
+      sha256 "36c8967c39592557cdf7f3cdd2c17e79978c3e7e31479d0f4f55ef10e5adcd1b"
       define_method(:install) do
         bin.install "ctty"
       end
